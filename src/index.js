@@ -1,19 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
-const props = {
-    trala: "React",
-    items: [
-        "Ricky",
-        "Dimi",
-        "Frieder",
-        "Tiemo",
-        "Karo",
-        "Joni"
-    ]
-}
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
+import "./index.css";
 
-ReactDOM.render(<App { ...props }/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

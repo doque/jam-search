@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-require("es6-promise").polyfill();
-require("isomorphic-fetch");
+import Suggestions from "./Suggestions";
+import SearchBar from "./SearchBar";
 
 class App extends Component {
   state = {
@@ -13,28 +13,30 @@ class App extends Component {
     this.fetchData();
   }
 
-  fetchData() {
-    fetch(
-      "https://glxmojvuyt.localtunnel.me/suche.jameda-elements.de/what-new?query=Zahnar&echo=Zahnar"
+  changeHandler(event) {
+    const value = event.target.value.trim();
+    const type = event.target.name;
+
+    if (value.length >= 3) {
+      this.fetchData(value, type).then(data => this.setState({ data }));
+    } else {
+      this.setState({ data: { suggests: [] } });
+    }
+  }
+
+  fetchData(value, type = "what") {
+    return fetch(
+      `https://jwwveyajhf.localtunnel.me/suche.jameda-elements.de/${type}-new?query=${value}`
     )
       .then(response => response.json())
-      .then(json => this.setState({ data: json }))
       .catch(e => console.log(e));
   }
 
   render() {
-    const { data } = this.state;
-
     return (
       <div className="App">
-        {data.suggests.map(suggest =>
-          <div>
-            <h2>{suggest.header}</h2>
-            <ul>
-              {suggest.list.map(item => <li>{item.term}</li>)}
-            </ul>
-          </div>
-        )}
+        <SearchBar changeHandler={this.changeHandler.bind(this)} />
+        <Suggestions data={this.state.data} />
       </div>
     );
   }

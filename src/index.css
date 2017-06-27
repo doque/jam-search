@@ -1,6 +1,7 @@
 body {
-  margin: 10em auto;
-  padding: 0;
+  margin: 20px auto;
+  padding: 20px;
   font-family: sans-serif;
-  width: 599px
+  border: 1px solid #ddd;
+  width: 400px;
 }
