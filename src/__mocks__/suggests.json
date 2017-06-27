@@ -1,0 +1,218 @@
+{
+    "query": "Zahn",
+    "suggests": [
+        {
+            "header": "Fachbereiche",
+            "list": [
+                {
+                    "score": 987,
+                    "showSelect": "Zahnarzt",
+                    "select": "gruppe=ZA&fachgebiet=",
+                    "term": "Zahnarzt",
+                    "info": "",
+                    "pl": "55#33456",
+                    "group": "Fachbereiche",
+                    "fold": "214"
+                },
+                {
+                    "score": 978,
+                    "showSelect": "Zahnärzte",
+                    "select": "gruppe=ZA&fachgebiet=",
+                    "term": "Zahnärzte",
+                    "info": "",
+                    "pl": "53#33456",
+                    "group": "Fachbereiche",
+                    "fold": "214"
+                },
+                {
+                    "score": 977,
+                    "showSelect": "Zahnärztin",
+                    "select": "gruppe=ZA&fachgebiet=",
+                    "term": "Zahnärztin",
+                    "info": "",
+                    "pl": "54#33456",
+                    "group": "Fachbereiche",
+                    "fold": "214"
+                },
+                {
+                    "score": 969,
+                    "showSelect": "Zahnmediziner",
+                    "select": "gruppe=ZA&fachgebiet=",
+                    "term": "Zahnmediziner",
+                    "info": "",
+                    "pl": "52#33456",
+                    "group": "Fachbereiche",
+                    "fold": "214"
+                },
+                {
+                    "score": 963,
+                    "showSelect": "Zahnmedizinerin",
+                    "select": "gruppe=ZA&fachgebiet=",
+                    "term": "Zahnmedizinerin",
+                    "info": "",
+                    "pl": "51#33456",
+                    "group": "Fachbereiche",
+                    "fold": "214"
+                },
+                {
+                    "score": 941,
+                    "showSelect": "Zahn-Klinik",
+                    "select": "gruppe=K&fachgebiet=A63",
+                    "term": "Zahn-Klinik",
+                    "info": "Klinik",
+                    "pl": "55#57",
+                    "group": "Fachbereiche",
+                    "fold": "192"
+                }
+            ]
+        },
+        {
+            "header": "Namen",
+            "list": [
+                {
+                    "score": 863,
+                    "showSelect": "Zahn, Erika",
+                    "term": "Zahn, Erika",
+                    "info": "Hautärztin (Dermatologin) Berlin",
+                    "deeplink": "/profil/70304842000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "80022485"
+                    ],
+                    "group": "Namen",
+                    "fold": "207311"
+                },
+                {
+                    "score": 863,
+                    "showSelect": "Zahn, Ralf",
+                    "term": "Zahn, Ralf",
+                    "info": "Arzt (Internist) Ludwigshafen",
+                    "deeplink": "/profil/70328680000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "80140760"
+                    ],
+                    "group": "Namen",
+                    "fold": "58949"
+                },
+                {
+                    "score": 861,
+                    "showSelect": "Zahn, Pia",
+                    "term": "Zahn, Pia",
+                    "info": " Bernau",
+                    "deeplink": "/profil/71206170000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "81215357"
+                    ],
+                    "group": "Namen",
+                    "fold": "146467"
+                },
+                {
+                    "score": 860,
+                    "showSelect": "Zahn, Tino",
+                    "term": "Zahn, Tino",
+                    "info": "Arzt (Internist) Cottbus",
+                    "deeplink": "/profil/70280662000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "80053414"
+                    ],
+                    "group": "Namen",
+                    "fold": "80629"
+                },
+                {
+                    "score": 859,
+                    "showSelect": "Zahn, Tanja",
+                    "term": "Zahn, Tanja",
+                    "info": "Frauenärztin (Gynäkologin) Dietmannsried",
+                    "deeplink": "/profil/71160664000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "81166296"
+                    ],
+                    "group": "Namen",
+                    "fold": "344929"
+                },
+                {
+                    "score": 859,
+                    "showSelect": "Zahn, Axel",
+                    "term": "Zahn, Axel",
+                    "info": " Oldenburg",
+                    "deeplink": "/profil/70161876000_1?beta=1",
+                    "type": "person",
+                    "multiEntry": [
+                        "80351385"
+                    ],
+                    "group": "Namen",
+                    "fold": "124473"
+                }
+            ]
+        },
+        {
+            "header": "Symptome, Keywords, passende Fachbereiche",
+            "list": [
+                {
+                    "score": 905,
+                    "showSelect": "Zahn",
+                    "select": "gruppe=ZA&fachgebiet=&kid=10705&kuid=52727",
+                    "term": "Zahn",
+                    "info": "Zahnärzte",
+                    "pl": "30#33456",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "368"
+                },
+                {
+                    "score": 900,
+                    "showSelect": "Zahnen",
+                    "select": "gruppe=HA&fachgebiet=F14&kid=10710&kuid=52732",
+                    "term": "Zahnen",
+                    "info": "Kinderärzte",
+                    "pl": "30#10205",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "357"
+                },
+                {
+                    "score": 896,
+                    "showSelect": "Zahnen",
+                    "select": "gruppe=ZA&fachgebiet=&kid=10710&kuid=54692",
+                    "term": "Zahnen",
+                    "info": "Zahnärzte",
+                    "pl": "20#33456",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "368"
+                },
+                {
+                    "score": 896,
+                    "showSelect": "Zahnhals",
+                    "select": "gruppe=ZA&fachgebiet=&kid=10723&kuid=52744",
+                    "term": "Zahnhals",
+                    "info": "Zahnärzte",
+                    "pl": "30#33456",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "368"
+                },
+                {
+                    "score": 896,
+                    "showSelect": "Zahnloch",
+                    "select": "gruppe=ZA&fachgebiet=Z19&kid=14770&kuid=14829",
+                    "term": "Zahnloch",
+                    "info": "Endodontologen",
+                    "pl": "35#1133",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "319"
+                },
+                {
+                    "score": 896,
+                    "showSelect": "Zahnnerv",
+                    "select": "gruppe=ZA&fachgebiet=Z19&kid=24869&kuid=54769",
+                    "term": "Zahnnerv",
+                    "info": "Endodontologen",
+                    "pl": "35#1133",
+                    "group": "Symptome, Keywords, passende Fachbereiche",
+                    "fold": "319"
+                }
+            ]
+        }
+    ]
+}

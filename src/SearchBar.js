@@ -1,7 +1,14 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class SearchBar extends Component {
+  static propTypes = {
+    selected: PropTypes.string,
+    changeHandler: PropTypes.func.isRequired
+  };
+
   render() {
+    debugger;
     return (
       <div>
         <label>
@@ -12,6 +19,7 @@ class SearchBar extends Component {
             onChange={e => {
               this.props.changeHandler(e);
             }}
+            value={this.props.selected}
           />
         </label>
 
@@ -23,6 +31,7 @@ class SearchBar extends Component {
             onChange={e => {
               this.props.changeHandler(e);
             }}
+            value={this.props.selected}
           />
         </label>
       </div>

@@ -1,11 +1,24 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import SuggestItem from "./SuggestItem";
 
 class Suggestions extends Component {
+  static propTypes = {
+    data: PropTypes.object,
+    clickHandler: PropTypes.func
+  };
+
   render() {
+    debugger;
+    const { suggests } = this.props.data;
+    const { clickHandler } = this.props;
+
     return (
       <div>
-        {this.props.data.suggests.map(suggest => <SuggestItem {...suggest} />)}
+        {suggests.map(suggest =>
+          <SuggestItem {...suggest} clickHandler={clickHandler} />
+        )}
       </div>
     );
   }

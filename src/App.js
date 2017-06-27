@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { dataFetcher } from "./Api";
+
 import Suggestions from "./Suggestions";
 import SearchBar from "./SearchBar";
 
@@ -6,11 +8,12 @@ class App extends Component {
   state = {
     data: {
       suggests: []
-    }
+    },
+    selected: ""
   };
 
-  componentWillMount() {
-    this.fetchData();
+  clickHandler(selected) {
+    this.setState({ selected });
   }
 
   changeHandler(event) {
@@ -22,21 +25,28 @@ class App extends Component {
     } else {
       this.setState({ data: { suggests: [] } });
     }
+    this.setState({
+      selected: value
+    });
   }
 
   fetchData(value, type = "what") {
-    return fetch(
-      `https://jwwveyajhf.localtunnel.me/suche.jameda-elements.de/${type}-new?query=${value}`
-    )
-      .then(response => response.json())
-      .catch(e => console.log(e));
+    const url = `https://jameda.localtunnel.me/suche.jameda-elements.de/${type}-new?query=${value}`;
+
+    return dataFetcher(url);
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar changeHandler={this.changeHandler.bind(this)} />
-        <Suggestions data={this.state.data} />
+        <SearchBar
+          selected={this.state.selected}
+          changeHandler={this.changeHandler.bind(this)}
+        />
+        <Suggestions
+          data={this.state.data}
+          clickHandler={this.clickHandler.bind(this)}
+        />
       </div>
     );
   }
