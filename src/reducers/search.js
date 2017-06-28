@@ -2,9 +2,9 @@ import {
   ENTER_SEARCHTERM,
   REQUEST_SUGGESTIONS,
   RECEIVE_SUGGESTIONS
-} from "../actions/search";
+} from "../actions/Search";
 
-const search = (
+const Search = (
   state = {
     suggestions: [],
     searchTerm: ""
@@ -34,4 +34,4 @@ const search = (
   }
 };
 
-export default search;
+export default Search;

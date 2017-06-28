@@ -5,7 +5,11 @@ import SuggestItem from "./SuggestItem";
 
 const Suggestions = ({ suggestions }) =>
   <div>
-    {suggestions.map(suggest => <SuggestItem {...suggest} />)}
+    {suggestions.map((suggest, i) => <SuggestItem {...suggest} key={i} />)}
   </div>;
+
+Suggestions.PropTypes = {
+  suggestions: PropTypes.array
+};
 
 export default Suggestions;

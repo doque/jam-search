@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SearchForm = ({ searchTerm, changeHandler }) =>
   <div>
-    <label for="what">
+    <label htmlFor="what">
       Was:
       <input
         type="text"
@@ -15,5 +16,10 @@ const SearchForm = ({ searchTerm, changeHandler }) =>
       />
     </label>
   </div>;
+
+SearchForm.propTypes = {
+  searchTerm: PropTypes.string,
+  changeHandler: PropTypes.func
+};
 
 export default SearchForm;

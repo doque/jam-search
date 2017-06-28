@@ -1,17 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { mount } from "enzyme";
+import { render } from "enzyme";
 import renderer from "react-test-renderer";
-import sinon from "sinon";
 
-import Search from "../components/Search";
+import { Search } from "../containers/Search";
+import Loading from "../components/Loading";
+import SuggestItem from "../components/SuggestItem";
+
+const defaultProps = {
+  suggestions: []
+};
+
+const renderWithProps = (props = defaultProps) => {
+  return renderer.create(<Search {...props} />).toJSON();
+};
 
 it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Search />, div);
+  const wrapper = renderWithProps();
+  expect(wrapper).toMatchSnapshot();
 });
 
-it("renders correctly", () => {
-  const tree = renderer.create(<Search />).toJSON();
-  expect(tree).toMatchSnapshot();
+it("renders the loading spinner when isFetching is true", () => {
+  const wrapper = renderWithProps({
+    ...defaultProps,
+    isFetching: true
+  });
+  expect(wrapper).toMatchSnapshot();
+});
+
+it("does not render the loading spinner when isFetching is false", () => {
+  const wrapper = renderWithProps({
+    ...defaultProps,
+    isFetching: false
+  });
+
+  expect(wrapper).toMatchSnapshot();
+});
+
+it("renders the correct number of SuggestItems", () => {
+  const data = require("../__mocks__/Search");
+  const wrapper = renderWithProps({ suggestions: data.suggests });
+  expect(wrapper).toMatchSnapshot();
 });

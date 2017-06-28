@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { enteredSearchTerm } from "../actions/search";
+import { enteredSearchTerm } from "../actions/Search";
 
 import Suggestions from "../components/Suggestions";
 import SearchForm from "../components/SearchForm";
@@ -25,3 +25,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export { Search };

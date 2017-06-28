@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does not render the loading spinner when isFetching is false 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="what"
+    >
+      Was:
+      <input
+        className="input-field"
+        name="what"
+        onChange={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </label>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders the correct number of SuggestItems 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="what"
+    >
+      Was:
+      <input
+        className="input-field"
+        name="what"
+        onChange={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </label>
+  </div>
+  <div>
+    <div>
+      <h2>
+        Fachbereiche
+      </h2>
+      <ul>
+        <li
+          onClick={[Function]}
+        >
+          Zahnarzt
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnärzte
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnärztin
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnmediziner
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnmedizinerin
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn-Klinik
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>
+        Namen
+      </h2>
+      <ul>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Erika
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Ralf
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Pia
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Tino
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Tanja
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahn, Axel
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>
+        Symptome, Keywords, passende Fachbereiche
+      </h2>
+      <ul>
+        <li
+          onClick={[Function]}
+        >
+          Zahn
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnen
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnen
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnhals
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnloch
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          Zahnnerv
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the loading spinner when isFetching is true 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="what"
+    >
+      Was:
+      <input
+        className="input-field"
+        name="what"
+        onChange={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </label>
+  </div>
+  <img
+    alt="Loading..."
+    src="loading.svg"
+  />
+  <div />
+</div>
+`;
+
+exports[`renders without crashing 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="what"
+    >
+      Was:
+      <input
+        className="input-field"
+        name="what"
+        onChange={[Function]}
+        type="text"
+        value={undefined}
+      />
+    </label>
+  </div>
+  <div />
+</div>
+`;
