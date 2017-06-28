@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { render } from "enzyme";
 import renderer from "react-test-renderer";
 
-import { Search } from "../containers/Search";
-import Loading from "../components/Loading";
-import SuggestItem from "../components/SuggestItem";
+import { Search } from "../../containers/Search";
+import Loading from "../../components/Loading";
+import SuggestItem from "../../components/SuggestItem";
 
 const defaultProps = {
   suggestions: []
@@ -38,7 +38,7 @@ it("does not render the loading spinner when isFetching is false", () => {
 });
 
 it("renders the correct number of SuggestItems", () => {
-  const data = require("../__mocks__/Search");
+  const data = require("../../__mocks__/Search");
   const wrapper = renderWithProps({ suggestions: data.suggests });
   expect(wrapper).toMatchSnapshot();
 });
