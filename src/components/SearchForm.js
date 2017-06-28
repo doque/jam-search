@@ -1,15 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const SearchForm = ({ searchTerm, onChange }) =>
+const SearchForm = ({ searchTerm, changeHandler }) =>
   <div>
-    <label>
-      Was?
-      <input type="text" name="what" value={searchTerm} onChange={onChange} />
-    </label>
-    <label>
-      Wo?
-      <input type="text" name="where" value={searchTerm} onChange={onChange} />
+    <label for="what">
+      Was:
+      <input
+        type="text"
+        className="input-field"
+        name="what"
+        value={searchTerm}
+        onChange={e => {
+          changeHandler(e.target.value);
+        }}
+      />
     </label>
   </div>;
 

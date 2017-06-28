@@ -1,10 +1,10 @@
-export const ENTER_SEACHTERM = "ENTER_SEACHTERM";
+export const ENTER_SEARCHTERM = "ENTER_SEARCHTERM";
 export const REQUEST_SUGGESTIONS = "REQUEST_SUGGESTIONS";
-export const RECEIVE_SUGGESTION = "RECEIVE_SUGGESTIONS";
+export const RECEIVE_SUGGESTIONS = "RECEIVE_SUGGESTIONS";
 
 export const enteredSearchTerm = searchTerm => {
   return {
-    type: ENTER_SEACHTERM,
+    type: ENTER_SEARCHTERM,
     searchTerm
   };
 };
@@ -17,7 +17,7 @@ export const requestedSuggestions = () => {
 
 export const receivedSuggestions = suggestions => {
   return {
-    type: RECEIVE_SUGGESTION,
+    type: RECEIVE_SUGGESTIONS,
     suggestions
   };
 };
