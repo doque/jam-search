@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import { retrieveData } from "./Api";
 
 import Suggestions from "./Suggestions";
-import SearchBar from "./SearchBar";
+import SearchForm from "./SearchForm";
 
-class App extends Component {
+class SearchContainer extends Component {
   state = {
     data: {
       suggests: []
     },
-    selected: ""
+    searchTerm: ""
   };
 
   changeHandler(event) {
@@ -21,24 +20,26 @@ class App extends Component {
     } else {
       this.setState({ data: { suggests: [] } });
     }
-    this.setState({ selected: value });
+    this.setState({ searchTerm: value });
   }
 
-  clickHandler(selected) {
-    this.setState({ selected });
+  clickHandler(searchTerm) {
+    this.setState({ searchTerm });
   }
 
   fetchData(value, type = "what") {
     const url = `https://jameda.localtunnel.me/suche.jameda-elements.de/${type}-new?query=${value}`;
 
-    return retrieveData(url);
+    return fetch(url)
+      .then(response => response.json())
+      .catch(e => console.error("Probably offline?", e));
   }
 
   render() {
     return (
-      <div className="App">
-        <SearchBar
-          selected={this.state.selected}
+      <div>
+        <SearchForm
+          searchTerm={this.state.searchTerm}
           changeHandler={this.changeHandler.bind(this)}
         />
         <Suggestions
@@ -50,4 +51,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SearchContainer;

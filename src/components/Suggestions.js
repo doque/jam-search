@@ -10,7 +10,6 @@ class Suggestions extends Component {
   };
 
   render() {
-    debugger;
     const { suggests } = this.props.data;
     const { clickHandler } = this.props;
 

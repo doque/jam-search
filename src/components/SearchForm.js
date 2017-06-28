@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class SearchBar extends Component {
+class SearchForm extends Component {
   static propTypes = {
-    selected: PropTypes.string,
+    searchTerm: PropTypes.string,
     changeHandler: PropTypes.func.isRequired
   };
 
@@ -19,7 +19,7 @@ class SearchBar extends Component {
             onChange={e => {
               this.props.changeHandler(e);
             }}
-            value={this.props.selected}
+            value={this.props.searchTerm}
           />
         </label>
 
@@ -31,7 +31,7 @@ class SearchBar extends Component {
             onChange={e => {
               this.props.changeHandler(e);
             }}
-            value={this.props.selected}
+            value={this.props.searchTerm}
           />
         </label>
       </div>
@@ -39,4 +39,4 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+export default SearchForm;
