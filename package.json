@@ -12,7 +12,9 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
     "react-test-renderer": "^15.6.1",
+    "redux": "^3.7.1",
     "sinon": "^2.3.5"
   },
   "devDependencies": {

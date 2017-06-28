@@ -1,8 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Search from "./components/Search";
 import registerServiceWorker from "./registerServiceWorker";
 import "./styles.css";
 
-ReactDOM.render(<Search />, document.getElementById("root"));
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+
+import Search from "./components/Search";
+import suggestions from "./reducers/search";
+
+const store = createStore(suggestions);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Search />
+  </Provider>,
+  document.getElementById("root")
+);
 registerServiceWorker();

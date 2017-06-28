@@ -2,7 +2,7 @@ import {
   ENTER_SEARCHTERM,
   SUGGESTIONS_RECEIVED,
   SUGGESTIONS_REQUESTED
-} from "../actions/";
+} from "../actions/search";
 
 const suggestions = (
   state = {
