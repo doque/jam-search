@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import SuggestItem from "./SuggestItem";
 
-const Suggestions = ({ suggestions }) =>
+const Suggestions = ({ suggestions = [] }) =>
   <div>
     {suggestions.map((suggest, i) => <SuggestItem {...suggest} key={i} />)}
   </div>;
