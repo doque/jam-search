@@ -7,6 +7,7 @@ import {
 const Search = (
   state = {
     suggestions: [],
+    isFetching: false,
     searchTerm: ""
   },
   action

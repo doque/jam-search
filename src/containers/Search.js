@@ -14,11 +14,7 @@ const Search = ({ searchTerm, isFetching, suggestions, changeHandler }) =>
     <Suggestions suggestions={suggestions} />
   </div>;
 
-const mapStateToProps = ({ searchTerm, isFetching, suggestions }) => ({
-  isFetching,
-  searchTerm,
-  suggestions
-});
+const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
   changeHandler: searchTerm => dispatch(enteredSearchTerm(dispatch, searchTerm))
