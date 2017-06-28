@@ -1,9 +1,6 @@
-require("es6-promise").polyfill();
-require("isomorphic-fetch");
-
-function dataFetcher(url) {
+function retrieveData(url) {
   return fetch(url)
     .then(response => response.json())
-    .catch(e => console.log(e));
+    .catch(e => console.error("OFFLINE", e));
 }
-export { dataFetcher };
+export { retrieveData };

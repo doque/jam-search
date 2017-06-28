@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { dataFetcher } from "./Api";
+import { retrieveData } from "./Api";
 
 import Suggestions from "./Suggestions";
 import SearchBar from "./SearchBar";
@@ -12,10 +12,6 @@ class App extends Component {
     selected: ""
   };
 
-  clickHandler(selected) {
-    this.setState({ selected });
-  }
-
   changeHandler(event) {
     const value = event.target.value.trim();
     const type = event.target.name;
@@ -25,15 +21,17 @@ class App extends Component {
     } else {
       this.setState({ data: { suggests: [] } });
     }
-    this.setState({
-      selected: value
-    });
+    this.setState({ selected: value });
+  }
+
+  clickHandler(selected) {
+    this.setState({ selected });
   }
 
   fetchData(value, type = "what") {
     const url = `https://jameda.localtunnel.me/suche.jameda-elements.de/${type}-new?query=${value}`;
 
-    return dataFetcher(url);
+    return retrieveData(url);
   }
 
   render() {
