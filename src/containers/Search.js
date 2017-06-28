@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 
 import { enteredSearchTerm } from "../actions/search";
 
-import Suggestions from "./Suggestions";
-import SearchForm from "./SearchForm";
-import Loading from "./Loading";
+import Suggestions from "../components/Suggestions";
+import SearchForm from "../components/SearchForm";
+import Loading from "../components/Loading";
 
 const Search = ({ searchTerm, isFetching, suggestions, changeHandler }) =>
   <div>
@@ -22,8 +22,6 @@ const mapStateToProps = ({ searchTerm, isFetching, suggestions }) => ({
 
 const mapDispatchToProps = dispatch => ({
   changeHandler: searchTerm => dispatch(enteredSearchTerm(dispatch, searchTerm))
-  //  clickHandler: item => dispatch(selectedItem(item))
 });
 
-const SearchConnected = connect(mapStateToProps, mapDispatchToProps)(Search);
-export default SearchConnected;
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

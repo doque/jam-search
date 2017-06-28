@@ -6,7 +6,7 @@ import "./styles.css";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-import SearchConnected from "./components/Search";
+import Search from "./containers/Search";
 import suggestions from "./reducers/search";
 
 const store = createStore(
@@ -16,7 +16,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <SearchConnected />
+    <Search />
   </Provider>,
   document.getElementById("root")
 );
