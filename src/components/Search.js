@@ -3,13 +3,15 @@ import { connect } from "react-redux";
 
 import { enteredSearchTerm } from "../actions/search";
 
-//import Suggestions from "./Suggestions";
+import Suggestions from "./Suggestions";
 import SearchForm from "./SearchForm";
+import Loading from "./Loading";
 
 const Search = ({ searchTerm, isFetching, suggestions, changeHandler }) =>
-  <div class="Search">
+  <div>
     <SearchForm searchTerm={searchTerm} changeHandler={changeHandler} />
-    {/*<Suggestions suggestions={suggestions} clickHandler={clickHandler} />*/}
+    {isFetching && <Loading />}
+    <Suggestions suggestions={suggestions} />
   </div>;
 
 const mapStateToProps = ({ searchTerm, isFetching, suggestions }) => ({
@@ -19,7 +21,7 @@ const mapStateToProps = ({ searchTerm, isFetching, suggestions }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  changeHandler: searchTerm => dispatch(enteredSearchTerm(searchTerm))
+  changeHandler: searchTerm => dispatch(enteredSearchTerm(dispatch, searchTerm))
   //  clickHandler: item => dispatch(selectedItem(item))
 });
 

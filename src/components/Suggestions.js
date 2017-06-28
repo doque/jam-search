@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 
 import SuggestItem from "./SuggestItem";
 
-const Suggestions = ({ suggestions, clickHandler }) =>
+const Suggestions = ({ suggestions }) =>
   <div>
-    {suggestions.suggests.map(suggest =>
-      <SuggestItem {...suggest} clickHandler={clickHandler} />
-    )}
+    {suggestions.map(suggest => <SuggestItem {...suggest} />)}
   </div>;
 
 export default Suggestions;

@@ -4,7 +4,7 @@ import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 import sinon from "sinon";
 
-import Search from "./Search";
+import Search from "../components/Search";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
