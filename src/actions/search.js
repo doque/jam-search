@@ -1,15 +1,12 @@
 import { fetchSuggestions } from "../util/Api";
-
-export const ENTER_SEARCHTERM = "ENTER_SEARCHTERM";
-export const REQUEST_SUGGESTIONS = "REQUEST_SUGGESTIONS";
-export const RECEIVE_SUGGESTIONS = "RECEIVE_SUGGESTIONS";
-export const OFFLINE = "OFFLINE";
+import * as types from "../constants/actionTypes.js";
+import { REQUEST_SUGGESTIONS } from "../constants/actionTypes";
 
 export const enteredSearchTerm = (dispatch, searchTerm) => {
   dispatch(requestedSuggestions(dispatch, searchTerm));
 
   return {
-    type: ENTER_SEARCHTERM,
+    type: types.ENTER_SEARCHTERM,
     searchTerm
   };
 };
@@ -25,20 +22,20 @@ export const requestedSuggestions = (dispatch, searchTerm) => {
     });
 
   return {
-    type: REQUEST_SUGGESTIONS
+    type: types.REQUEST_SUGGESTIONS
   };
 };
 
 export const offline = isOffline => {
   return {
-    type: OFFLINE,
+    type: types.OFFLINE,
     isOffline
   };
 };
 
 export const receivedSuggestions = suggestions => {
   return {
-    type: RECEIVE_SUGGESTIONS,
+    type: types.RECEIVE_SUGGESTIONS,
     suggestions
   };
 };

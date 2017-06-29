@@ -193,7 +193,7 @@ exports[`renders the loading spinner when isFetching is true 1`] = `
   </div>
   <img
     alt="Loading..."
-    src="loading.svg"
+    src="/loading.svg"
   />
   <div />
 </div>

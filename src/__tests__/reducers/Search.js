@@ -1,15 +1,15 @@
-import Search from "../../reducers/Search";
-import * as types from "../../actions/Search";
+import reducer from "../../reducers/Search";
+import * as types from "../../constants/actionTypes";
 import { initialState } from "../../reducers/Search";
 
 describe("Search Reducer", () => {
   it("should return the initial state", () => {
-    expect(Search(undefined, {})).toEqual(initialState);
+    expect(reducer(undefined, {})).toEqual(initialState);
   });
 
   it("should handle ENTER_SEARCHTERM", () => {
     expect(
-      Search([], {
+      reducer([], {
         type: types.ENTER_SEARCHTERM,
         searchTerm: "Hello"
       })
@@ -20,7 +20,7 @@ describe("Search Reducer", () => {
 
   it("should handle REQUEST_SUGGESTIONS correctly", () => {
     expect(
-      Search([], {
+      reducer([], {
         type: types.REQUEST_SUGGESTIONS
       })
     ).toEqual({

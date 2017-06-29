@@ -1,9 +1,4 @@
-import {
-  ENTER_SEARCHTERM,
-  REQUEST_SUGGESTIONS,
-  RECEIVE_SUGGESTIONS,
-  OFFLINE
-} from "../actions/Search";
+import * as types from "../constants/actionTypes";
 
 const initialState = {
   suggestions: [],
@@ -12,25 +7,25 @@ const initialState = {
   isOffline: false
 };
 
-const Search = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ENTER_SEARCHTERM:
+    case types.ENTER_SEARCHTERM:
       return {
         ...state,
         searchTerm: action.searchTerm
       };
-    case REQUEST_SUGGESTIONS:
+    case types.REQUEST_SUGGESTIONS:
       return {
         ...state,
         isFetching: true
       };
-    case RECEIVE_SUGGESTIONS:
+    case types.RECEIVE_SUGGESTIONS:
       return {
         ...state,
         isFetching: false,
         suggestions: action.suggestions
       };
-    case OFFLINE:
+    case types.OFFLINE:
       return {
         ...state,
         isOffline: action.isOffline
@@ -42,4 +37,4 @@ const Search = (state = initialState, action) => {
 };
 
 export { initialState };
-export default Search;
+export default reducer;

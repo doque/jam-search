@@ -7,10 +7,10 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 
 import Search from "./containers/Search";
-import suggestions from "./reducers/Search";
+import SearchReducer from "./reducers/Search";
 
 const store = createStore(
-  suggestions,
+  SearchReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
