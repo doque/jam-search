@@ -1,5 +1,5 @@
 import React from "react";
 
-const Offline = () => <div>Offline</div>;
+const Offline = () => <div>⚠️ Offline</div>;
 
 export default Offline;

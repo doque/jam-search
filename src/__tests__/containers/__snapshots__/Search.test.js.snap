@@ -36,10 +36,10 @@ exports[`renders Offline when isOffline is true 1`] = `
       />
     </label>
   </div>
-  <div />
   <div>
-    Offline
+    ⚠️ Offline
   </div>
+  <div />
 </div>
 `;
 

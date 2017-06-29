@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 
 import Search from "./containers/Search";
-import suggestions from "./reducers/search";
+import suggestions from "./reducers/Search";
 
 const store = createStore(
   suggestions,
