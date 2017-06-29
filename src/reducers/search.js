@@ -1,17 +1,18 @@
 import {
   ENTER_SEARCHTERM,
   REQUEST_SUGGESTIONS,
-  RECEIVE_SUGGESTIONS
+  RECEIVE_SUGGESTIONS,
+  OFFLINE
 } from "../actions/Search";
 
-const Search = (
-  state = {
-    suggestions: [],
-    isFetching: false,
-    searchTerm: ""
-  },
-  action
-) => {
+const initialState = {
+  suggestions: [],
+  isFetching: false,
+  searchTerm: "",
+  isOffline: false
+};
+
+const Search = (state = initialState, action) => {
   switch (action.type) {
     case ENTER_SEARCHTERM:
       return {
@@ -28,6 +29,11 @@ const Search = (
         ...state,
         isFetching: false,
         suggestions: action.suggestions
+      };
+    case OFFLINE:
+      return {
+        ...state,
+        isOffline: action.isOffline
       };
     default: {
       return state;

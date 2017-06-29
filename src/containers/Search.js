@@ -6,12 +6,20 @@ import { enteredSearchTerm } from "../actions/Search";
 import Suggestions from "../components/Suggestions";
 import SearchForm from "../components/SearchForm";
 import Loading from "../components/Loading";
+import Offline from "../components/Offline";
 
-const Search = ({ searchTerm, isFetching, suggestions, changeHandler }) =>
+const Search = ({
+  searchTerm,
+  isFetching,
+  suggestions,
+  changeHandler,
+  isOffline
+}) =>
   <div>
     <SearchForm searchTerm={searchTerm} changeHandler={changeHandler} />
     {isFetching && <Loading />}
     <Suggestions suggestions={suggestions} />
+    {isOffline && <Offline />}
   </div>;
 
 const mapStateToProps = state => state;
