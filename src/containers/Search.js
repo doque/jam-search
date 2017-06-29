@@ -17,9 +17,9 @@ const Search = ({
 }) =>
   <div>
     <SearchForm searchTerm={searchTerm} changeHandler={changeHandler} />
-    {isFetching && <Loading />}
-    <Suggestions suggestions={suggestions} />
+    {!isOffline && isFetching && <Loading />}
     {isOffline && <Offline />}
+    <Suggestions suggestions={suggestions} />
   </div>;
 
 const mapStateToProps = state => state;

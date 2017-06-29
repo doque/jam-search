@@ -41,4 +41,5 @@ const Search = (state = initialState, action) => {
   }
 };
 
+export { initialState };
 export default Search;

@@ -12,11 +12,34 @@ exports[`does not render the loading spinner when isFetching is false 1`] = `
         name="what"
         onChange={[Function]}
         type="text"
-        value={undefined}
+        value=""
       />
     </label>
   </div>
   <div />
+</div>
+`;
+
+exports[`renders Offline when isOffline is true 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="what"
+    >
+      Was:
+      <input
+        className="input-field"
+        name="what"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+  </div>
+  <div />
+  <div>
+    Offline
+  </div>
 </div>
 `;
 
@@ -164,7 +187,7 @@ exports[`renders the loading spinner when isFetching is true 1`] = `
         name="what"
         onChange={[Function]}
         type="text"
-        value={undefined}
+        value=""
       />
     </label>
   </div>
@@ -188,7 +211,7 @@ exports[`renders without crashing 1`] = `
         name="what"
         onChange={[Function]}
         type="text"
-        value={undefined}
+        value=""
       />
     </label>
   </div>

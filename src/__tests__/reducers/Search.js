@@ -1,13 +1,8 @@
 import Search from "../../reducers/Search";
 import * as types from "../../actions/Search";
+import { initialState } from "../../reducers/Search";
 
 describe("Search Reducer", () => {
-  const initialState = {
-    searchTerm: "",
-    isFetching: false,
-    suggestions: []
-  };
-
   it("should return the initial state", () => {
     expect(Search(undefined, {})).toEqual(initialState);
   });
