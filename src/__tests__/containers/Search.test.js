@@ -4,12 +4,11 @@ import { render } from "enzyme";
 import renderer from "react-test-renderer";
 
 import { Search } from "../../containers/Search";
+import { initialState } from "../../reducers/Search";
 import Loading from "../../components/Loading";
 import SuggestItem from "../../components/SuggestItem";
 
-const defaultProps = {
-  suggestions: []
-};
+const defaultProps = initialState;
 
 const renderWithProps = (props = defaultProps) => {
   return renderer.create(<Search {...props} />).toJSON();
@@ -35,6 +34,22 @@ it("does not render the loading spinner when isFetching is false", () => {
   });
 
   expect(wrapper).toMatchSnapshot();
+});
+
+it("renders Offline when isOffline is true", () => {
+  const wrapper = renderWithProps({
+    ...defaultProps,
+    isOffline: true
+  });
+
+  expect(wrapper).toMatchSnapshot();
+});
+
+it("does not render Offline when isOffline is false", () => {
+  const wrapper = renderWithProps({
+    ...defaultProps,
+    isOffline: false
+  });
 });
 
 it("renders the correct number of SuggestItems", () => {

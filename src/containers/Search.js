@@ -17,7 +17,7 @@ const Search = ({
 }) =>
   <div>
     <SearchForm searchTerm={searchTerm} changeHandler={changeHandler} />
-    {isFetching && <Loading />}
+    {!isOffline && isFetching && <Loading />}
     <Suggestions suggestions={suggestions} />
     {isOffline && <Offline />}
   </div>;
