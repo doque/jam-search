@@ -1,6 +1,5 @@
 import { fetchSuggestions } from "../util/Api";
 import * as types from "../constants/actionTypes.js";
-import { REQUEST_SUGGESTIONS } from "../constants/actionTypes";
 
 export const enteredSearchTerm = (dispatch, searchTerm) => {
   dispatch(requestedSuggestions(dispatch, searchTerm));

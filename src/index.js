@@ -6,8 +6,9 @@ import "./styles.css";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-import Search from "./containers/Search";
-import SearchReducer from "./reducers/Search";
+import Search from "containers/Search";
+
+import SearchReducer from "reducers/Search";
 
 const store = createStore(
   SearchReducer,

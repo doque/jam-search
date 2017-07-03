@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { enteredSearchTerm } from "../actions/Search";
+import { enteredSearchTerm } from "actions/Search";
 
-import Suggestions from "../components/Suggestions";
-import SearchForm from "../components/SearchForm";
-import Loading from "../components/Loading";
-import Offline from "../components/Offline";
+import Suggestions from "components/Suggestions";
+import SearchForm from "components/SearchForm";
+import Loading from "components/Loading";
+import Offline from "components/Offline";
 
 const Search = ({
   searchTerm,
